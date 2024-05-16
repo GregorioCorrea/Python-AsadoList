@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Compras</title>
+</head>
+<body>
+    <h1>Lista de Compras para el Almuerzo Familiar</h1>
+    <form action="/add_item" method="POST">
+        <input type="text" name="item" placeholder="Añadir item a la lista">
+        <button type="submit">Añadir</button>
+    </form>
+    <h2>Items actuales:</h2>
+    <ul>
+        {% for item in items %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
