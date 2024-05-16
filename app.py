@@ -12,8 +12,9 @@ def home():
 @app.route('/add_item', methods=['POST'])
 def add_item():
     item = request.form.get('item')
-    if item:
-        shopping_list.append(item)
+    quantity = request.form.get('quantity')
+    if item and quantity:
+        shopping_list.append({'item': item, 'quantity': quantity})
     return redirect(url_for('home'))
 
 @app.route('/get_list', methods=['GET'])
