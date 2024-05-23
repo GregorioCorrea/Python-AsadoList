@@ -42,6 +42,17 @@ def get_list():
     items = table_service.query_entities(table_name)
     return jsonify([{'item': item.RowKey, 'quantity': item.quantity} for item in items])
 
+@app.route('/test_connection')
+def test_connection():
+    try:
+        test_entity = Entity()
+        test_entity.PartitionKey = 'test'
+        test_entity.RowKey = 'test'
+        test_entity.test_property = 'test_value'
+        table_service.insert_or_replace_entity(table_name, test_entity)
+        return 'Connection to Azure Table Storage is successful.'
+    except Exception as e:
+        return f'Error: {str(e)}
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
