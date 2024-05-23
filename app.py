@@ -6,8 +6,8 @@ import os
 
 app = Flask(__name__)
 
-account_name = os.getenv('ACCOUNT_NAME')
-account_key = os.getenv('ACCOUNT_KEY')
+account_name = "labnttstg01"
+account_key = "3DNiLUCGNuZiSSswD0ZexXmssx4Amt+YLw1ibevai7F253uzkdwX+Qm3KSrbvlCtMheDkIjCglrT+AStj2/ofA=="
 table_service = TableService(account_name=account_name, account_key=account_key)
 
 # Crear la tabla si no existe
