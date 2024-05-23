@@ -52,7 +52,7 @@ def test_connection():
         table_service.insert_or_replace_entity(table_name, test_entity)
         return 'Connection to Azure Table Storage is successful.'
     except Exception as e:
-        return f'Error: {str(e)}
+        return f'Error: {str(e)}'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
