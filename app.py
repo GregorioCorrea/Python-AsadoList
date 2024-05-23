@@ -6,14 +6,14 @@ import os
 
 app = Flask(__name__)
 
-account_name = "labnttstg01"
-account_key = "3DNiLUCGNuZiSSswD0ZexXmssx4Amt+YLw1ibevai7F253uzkdwX+Qm3KSrbvlCtMheDkIjCglrT+AStj2/ofA=="
+account_name = 'labnttstg01'
+account_key = 'Tt+K676XDKVRqG9M+PU36HG9yz7iuPlLXaEIB5Wssx5f6iWrl4WtpMb/kkFzRuI3bMNtLlhwTZqs+AStySH+Vw=='
 table_service = TableService(account_name=account_name, account_key=account_key)
 
 # Crear la tabla si no existe
 table_name = 'ShoppingList'
-if not table_service.exists(table_name):
-    table_service.create_table(table_name)
+#if not table_service.exists(table_name):
+#    table_service.create_table(table_name)
 
 # Lista de compras en memoria
 #shopping_list = []
